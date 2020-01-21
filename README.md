@@ -1,4 +1,4 @@
-# 学习 .Net Core
+# 学习 .NET Core
 
 ## 入门
 1. .NET Core 学习：<https://docs.microsoft.com/zh-cn/dotnet/core/tutorials>*（目标：入门，了解）*
