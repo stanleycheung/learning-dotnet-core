@@ -16,3 +16,5 @@
 
 ## 其他
 1. ASP.NET Core 示例：<https://github.com/dodyg/practical-aspnetcore>
+2. awesome-dotnet：<https://github.com/quozd/awesome-dotnet>
+3. DotNet 资源大全：<https://github.com/jobbole/awesome-dotnet-cn>*（awesome-dotnet 中文版）*
