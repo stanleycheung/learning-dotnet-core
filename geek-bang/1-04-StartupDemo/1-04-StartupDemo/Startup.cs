@@ -17,6 +17,7 @@ namespace _1_04_StartupDemo
     {
         public Startup(IConfiguration configuration)
         {
+            Console.WriteLine("Startup");
             Configuration = configuration;
         }
 
@@ -25,12 +26,18 @@ namespace _1_04_StartupDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Console.WriteLine("Startup.ConfigureServices");
             services.AddControllers();
+            services.AddMvc();
+            services.AddAuthentication();
+            services.AddAuthorization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Console.WriteLine("Startup.Configure");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -41,6 +48,10 @@ namespace _1_04_StartupDemo
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
+
+            //app.UseWebSockets();
 
             app.UseEndpoints(endpoints =>
             {
